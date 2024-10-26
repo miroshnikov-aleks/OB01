@@ -32,6 +32,8 @@ task2 = Task("Сделать домашнее задание", "2024-06-15")
 task_manager.add_task(task1)
 task_manager.add_task(task2)
 
+task2.mark_completed()
+
 task_manager.show_tasks()
 
 task1.mark_completed()
@@ -69,18 +71,18 @@ store1 = Store("Магнит", "Иванова 1")
 store2 = Store("Пятерочка", "Октябрьская 10")
 store3 = Store("Wildberries", "Ленина 38")
 
-store1.add_item("apples", 100.5)
+store1.add_item("apples", 100.50)
 store1.add_item("bananas", 50.75)
 
 store2.add_item("milk", 75.0)
-store2.add_item("bread", 41.5)
+store2.add_item("bread", 41.50)
 
 store3.add_item("eggs", 102.0)
 store3.add_item("butter", 153.0)
 
 # Тестирование методов
 print(store1)
-store1.update_price("apples", 50.6)
+store1.update_price("apples", 50.60)
 print(f"Цена яблок: {store1.get_price('apples')}")
 store1.remove_item("bananas")
 print(store1)
