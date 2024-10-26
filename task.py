@@ -24,20 +24,36 @@ class Store:
 # Создание объектов класса Store
 store1 = Store("Магнит", "Иванова 1")
 store2 = Store("Пятерочка", "Октябрьская 10")
-store3 = Store("Wildberries", "Ленина 38")
+store3 = Store("Дикси", "Ленина 38")
 
-store1.add_item("apples", 100.50)
-store1.add_item("bananas", 50.75)
+store1.add_item("яблоки", 100.50)
+store1.add_item("бананы", 50.75)
 
-store2.add_item("milk", 75.0)
-store2.add_item("bread", 41.50)
+store2.add_item("молоко", 75.0)
+store2.add_item("хлеб", 41.50)
 
-store3.add_item("eggs", 102.0)
-store3.add_item("butter", 153.0)
+store3.add_item("яйца", 102.0)
+store3.add_item("сливочное масло", 153.0)
 
-# Тестирование методов
-print(store1)
-store1.update_price("apples", 50.60)
-print(f"Цена яблок: {store1.get_price('apples')}")
-store1.remove_item("bananas")
-print(store1)
+# Тестирование методов для store2
+print("Тестирование методов для Пятерочки:")
+print(store2)
+
+# Добавление товара
+store2.add_item("сахар", 45.0)
+print("Добавлен сахар:")
+print(store2)
+
+# Обновление цены товара
+store2.update_price("молоко", 80.0)
+print("Цена молока обновлена:")
+print(store2)
+
+# Запрос цены товара
+price = store2.get_price("хлеб")
+print(f"Цена хлеба: {price}")
+
+# Удаление товара
+store2.remove_item("хлеб")
+print("Хлеб удален:")
+print(store2)
