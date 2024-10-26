@@ -26,8 +26,8 @@ class TaskManager:
             print(task)
 
 task_manager = TaskManager()
-task1 = Task("Купить продукты", "2024-10-26")
-task2 = Task("Сделать домашнее задание", "2024-10-26")
+task1 = Task("Купить продукты", "2024-06-12")
+task2 = Task("Сделать домашнее задание", "2024-06-15")
 
 task_manager.add_task(task1)
 task_manager.add_task(task2)
